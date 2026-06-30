@@ -1,0 +1,19 @@
+Tables_in_mcp_db
+analysis_logs
+code_snippets
+jobs
+prd_modules
+projects
+Field	Type	Null	Key	Default	Extra
+id	int	NO	PRI	NULL	auto_increment
+project_id	int	YES	MUL	NULL	
+idea_prompt	text	NO		NULL	
+gemini_analysis	mediumtext	YES		NULL	
+created_at	timestamp	YES		CURRENT_TIMESTAMP	DEFAULT_GENERATED
+Field	Type	Null	Key	Default	Extra
+id	int	NO	PRI	NULL	auto_increment
+project_id	int	YES	MUL	NULL	
+module_name	varchar(100)	YES		NULL	
+content	mediumtext	YES		NULL	
+vector_json	json	YES		NULL	
+updated_at	timestamp	YES		CURRENT_TIMESTAMP	DEFAULT_GENERATED on update CURRENT_TIMESTAMP
